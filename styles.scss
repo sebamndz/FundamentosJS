@@ -1,0 +1,116 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tablero {
+    height: 32vh;
+    width: 32vh;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    max-height: 60vh;
+    max-width: 60vh;
+    position: relative;
+}
+.color {
+    width: 50%;
+    height: 50%;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.celeste {
+    background: url(https://i.imgur.com/f6eDSWi.png);
+    background-repeat: no-repeat;
+}
+.violeta {
+    background: url(https://i.imgur.com/WDnXCss.png);
+    background-repeat: no-repeat;
+}
+.naranja {
+    background: url(https://i.imgur.com/ovL80MF.png);
+    background-repeat: no-repeat;
+}
+.verde {
+    background: url(https://i.imgur.com/ttvakKl.png);
+    background-repeat: no-repeat;
+}
+.celeste:hover {
+    background: rgb(255,255,255);
+background: linear-gradient(165deg, rgba(255,255,255,1) 4%, rgba(0,204,215,1) 99%);
+    border-radius: 50px;
+}
+.violeta:hover {
+    background: rgb(255,255,255);
+background: linear-gradient(340deg, rgba(255,255,255,1) 4%, rgba(190,0,215,1) 99%);
+border-radius: 50px;
+}
+.naranja:hover{
+    background: rgb(255,255,255);
+background: linear-gradient(40deg, rgba(255,255,255,1) 5%, rgba(255,113,0,1) 100%);
+border-radius: 50px;
+}
+.verde:hover{
+    background: rgb(255,255,255);
+background: linear-gradient(196deg, rgba(255,255,255,1) 4%, rgba(0,255,1,1) 99%);
+border-radius: 50px;
+}
+.light.celeste{
+    background: rgb(255,255,255);
+    background: linear-gradient(165deg, rgba(255,255,255,1) 4%, rgba(0,204,215,1) 99%);
+    border-radius: 50px;
+}
+.violeta.light {
+    background: rgb(255,255,255);
+    border-radius: 50px;
+    background: linear-gradient(340deg, rgba(255,255,255,1) 4%, rgba(190,0,215,1) 99%);
+}
+.naranja.light {
+    background: rgb(255,255,255);
+    border-radius: 50px;
+    background: linear-gradient(40deg, rgba(255,255,255,1) 5%, rgba(255,113,0,1) 100%);
+}
+.verde.light {
+    background: rgb(255,255,255);
+    border-radius: 50px;
+    background: linear-gradient(196deg, rgba(255,255,255,1) 4%, rgba(0,255,1,1) 99%);
+}
+.btn-start {
+    cursor: pointer;
+    width: 420px;
+    height: 100px;
+    background: #ecf0f1;
+    color: #2c3e50;
+    border: none;
+    border-bottom: 4px solid #c4c6c7;
+    border-radius: 8px;
+    font-size: 3em;
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 210px);
+    transition: .5s;
+    outline: none;
+}
+
+.btn-start:hover {
+    color: #ecf0f1;
+    background: #2c3e50;
+    border-bottom: 4px solid #1f3346;
+}
+
+.btn-start:active {
+    transform: scale(.95);
+}
+.hide {
+    display: none;
+}
+
