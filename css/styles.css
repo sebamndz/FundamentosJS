@@ -41,4 +41,6 @@ body { background-color: black; display: flex; align-items: center; justify-cont
 .btn-start:active { transform: scale(0.95); }
 
 .hide { display: none; }
+
+@media screen and (max-width: 850px) { .tablero { position: static; } }
 /*# sourceMappingURL=styles.css.map */

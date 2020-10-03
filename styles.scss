@@ -113,4 +113,8 @@ border-radius: 50px;
 .hide {
     display: none;
 }
-
+@media screen and (max-width: 850px) {
+    .tablero {
+        position: static;
+    }
+}
