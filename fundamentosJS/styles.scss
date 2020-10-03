@@ -1,0 +1,169 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tablero {
+    background: url(https://i.imgur.com/ORbWEAh.png)no-repeat;
+    background-size: 100%;
+    height: 70%;
+    width: 70%;
+    position: fixed;
+    overflow: hidden;
+    border-radius: 100%;
+    margin-bottom: 10vh;
+}
+.color {
+    width: 50%;
+    height:50%;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+
+.celeste {
+    background: url(https://i.imgur.com/mGW2Kvb.png)no-repeat ;
+    background-size: 100%;
+}
+.violeta {
+    background: url(https://i.imgur.com/DLu7k4b.png)no-repeat;
+    background-size: 100%;
+}
+.naranja {
+    background: url(https://i.imgur.com/SczjcoJ.png)no-repeat;
+    background-size: 100%;
+}
+.verde {
+    background: url(https://i.imgur.com/2TwurG7.png)no-repeat;
+    background-size: 100%;
+}
+@mixin border {
+    border-radius: 10%;
+}
+.celeste:hover {
+    background: rgb(255,255,255);
+    background: linear-gradient(165deg, rgba(255,255,255,1) 4%, rgba(0,204,215,1) 99%);
+    @include border
+}
+.violeta:hover {
+    background: rgb(255,255,255);
+    background: linear-gradient(340deg, rgba(255,255,255,1) 4%, rgba(190,0,215,1) 99%);
+    @include border
+}
+.naranja:hover{
+    background: rgb(255,255,255);
+    background: linear-gradient(40deg, rgba(255,255,255,1) 5%, rgba(255,113,0,1) 100%);
+    @include border
+}
+.verde:hover{
+    background: rgb(255,255,255);
+    background: linear-gradient(196deg, rgba(255,255,255,1) 4%, rgba(0,255,1,1) 99%);
+    @include border
+}
+.light.celeste{
+    background: rgb(255,255,255);
+    background: linear-gradient(165deg, rgba(255,255,255,1) 4%, rgba(0,204,215,1) 99%);
+    @include border
+}
+.violeta.light {
+    background: rgb(255,255,255);
+    background: linear-gradient(340deg, rgba(255,255,255,1) 4%, rgba(190,0,215,1) 99%);
+    @include border
+}
+.naranja.light {
+    background: rgb(255,255,255);
+    background: linear-gradient(40deg, rgba(255,255,255,1) 5%, rgba(255,113,0,1) 100%);
+    @include border
+}
+.verde.light {
+    background: rgb(255,255,255);
+    background: linear-gradient(196deg, rgba(255,255,255,1) 4%, rgba(0,255,1,1) 99%);
+    @include border
+}
+footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 20vh;
+    align-self: flex-end;
+    margin-top: 10px;
+}
+.btn-start {
+    cursor: pointer;
+    background: #ecf0f1;
+    color: #2c3e50;
+    border: none;
+    border-bottom: 4px solid #c4c6c7;
+    border-radius: 8px;
+    font-size: 3em;
+    position: absolute;
+    transition: .5s;
+    outline: none;
+    align-self: flex-start;
+}
+
+.btn-start:hover {
+    color: #ecf0f1;
+    background: #2c3e50;
+    border-bottom: 4px solid #1f3346;
+}
+
+.btn-start:active {
+    transform: scale(.95);
+}
+.hide {
+    display: none;
+}
+@media only screen and (max-width: 400px) {
+    .tablero {
+        height: 35vh;
+        width: 35vh;
+    }
+    .btn-start {
+        height: 10vh;
+        width: 35vh;
+        font-size: 4vh;
+    }
+}
+@media only screen and (min-width: 401px) {
+    .tablero {
+        height: 40vh;
+        width: 40vh;
+    }
+    .btn-start {
+        height: 10vh;
+        width: 40vh;
+        font-size: 4vh;
+    }
+}
+@media only screen and (min-width: 700px) {
+    .tablero {
+        height: 45vh;
+        width: 45vh;
+    }
+    .btn-start {
+        height: 11vh;
+        width: 45vh;
+        font-size: 4vh;
+    }
+}
+@media only screen and (min-width: 1100px) {
+    .tablero {
+        height: 60vh;
+        width: 60vh;
+    }
+    .btn-start {
+        height: 15vh;
+        width: 50vh;
+        font-size: 6vh;
+    }
+}
