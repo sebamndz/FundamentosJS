@@ -3,24 +3,25 @@
     margin: 0;
 }
 body {
+    height: 100vh;
     background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .tablero {
-    height: 32vh;
-    width: 32vh;
-    border-radius: 50%;
+    background: url(https://i.imgur.com/ORbWEAh.png)no-repeat;
+    background-size: 100%;
+    height: 70%;
+    width: 70%;
+    position: fixed;
     overflow: hidden;
-    margin: 0 auto;
-    max-height: 60vh;
-    max-width: 60vh;
-    position: relative;
+    border-radius: 100%;
+    margin-bottom: 10vh;
 }
 .color {
     width: 50%;
-    height: 50%;
+    height:50%;
 }
 .left {
     float: left;
@@ -28,66 +29,76 @@ body {
 .right {
     float: right;
 }
+
 .celeste {
-    background: url(https://i.imgur.com/f6eDSWi.png);
-    background-repeat: no-repeat;
+    background: url(https://i.imgur.com/mGW2Kvb.png)no-repeat ;
+    background-size: 100%;
 }
 .violeta {
-    background: url(https://i.imgur.com/WDnXCss.png);
-    background-repeat: no-repeat;
+    background: url(https://i.imgur.com/DLu7k4b.png)no-repeat;
+    background-size: 100%;
 }
 .naranja {
-    background: url(https://i.imgur.com/ovL80MF.png);
-    background-repeat: no-repeat;
+    background: url(https://i.imgur.com/SczjcoJ.png)no-repeat;
+    background-size: 100%;
 }
 .verde {
-    background: url(https://i.imgur.com/ttvakKl.png);
-    background-repeat: no-repeat;
+    background: url(https://i.imgur.com/2TwurG7.png)no-repeat;
+    background-size: 100%;
+}
+@mixin border {
+    border-radius: 10%;
 }
 .celeste:hover {
     background: rgb(255,255,255);
-background: linear-gradient(165deg, rgba(255,255,255,1) 4%, rgba(0,204,215,1) 99%);
-    border-radius: 50px;
+    background: linear-gradient(165deg, rgba(255,255,255,1) 4%, rgba(0,204,215,1) 99%);
+    @include border
 }
 .violeta:hover {
     background: rgb(255,255,255);
-background: linear-gradient(340deg, rgba(255,255,255,1) 4%, rgba(190,0,215,1) 99%);
-border-radius: 50px;
+    background: linear-gradient(340deg, rgba(255,255,255,1) 4%, rgba(190,0,215,1) 99%);
+    @include border
 }
 .naranja:hover{
     background: rgb(255,255,255);
-background: linear-gradient(40deg, rgba(255,255,255,1) 5%, rgba(255,113,0,1) 100%);
-border-radius: 50px;
+    background: linear-gradient(40deg, rgba(255,255,255,1) 5%, rgba(255,113,0,1) 100%);
+    @include border
 }
 .verde:hover{
     background: rgb(255,255,255);
-background: linear-gradient(196deg, rgba(255,255,255,1) 4%, rgba(0,255,1,1) 99%);
-border-radius: 50px;
+    background: linear-gradient(196deg, rgba(255,255,255,1) 4%, rgba(0,255,1,1) 99%);
+    @include border
 }
 .light.celeste{
     background: rgb(255,255,255);
     background: linear-gradient(165deg, rgba(255,255,255,1) 4%, rgba(0,204,215,1) 99%);
-    border-radius: 50px;
+    @include border
 }
 .violeta.light {
     background: rgb(255,255,255);
-    border-radius: 50px;
     background: linear-gradient(340deg, rgba(255,255,255,1) 4%, rgba(190,0,215,1) 99%);
+    @include border
 }
 .naranja.light {
     background: rgb(255,255,255);
-    border-radius: 50px;
     background: linear-gradient(40deg, rgba(255,255,255,1) 5%, rgba(255,113,0,1) 100%);
+    @include border
 }
 .verde.light {
     background: rgb(255,255,255);
-    border-radius: 50px;
     background: linear-gradient(196deg, rgba(255,255,255,1) 4%, rgba(0,255,1,1) 99%);
+    @include border
+}
+footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 20vh;
+    align-self: flex-end;
+    margin-top: 10px;
 }
 .btn-start {
     cursor: pointer;
-    width: 420px;
-    height: 100px;
     background: #ecf0f1;
     color: #2c3e50;
     border: none;
@@ -95,10 +106,9 @@ border-radius: 50px;
     border-radius: 8px;
     font-size: 3em;
     position: absolute;
-    top: calc(50% - 50px);
-    left: calc(50% - 210px);
     transition: .5s;
     outline: none;
+    align-self: flex-start;
 }
 
 .btn-start:hover {
@@ -113,8 +123,47 @@ border-radius: 50px;
 .hide {
     display: none;
 }
-@media screen and (max-width: 850px) {
+@media only screen and (max-width: 400px) {
     .tablero {
-        position: static;
+        height: 35vh;
+        width: 35vh;
+    }
+    .btn-start {
+        height: 10vh;
+        width: 35vh;
+        font-size: 4vh;
+    }
+}
+@media only screen and (min-width: 401px) {
+    .tablero {
+        height: 40vh;
+        width: 40vh;
+    }
+    .btn-start {
+        height: 10vh;
+        width: 40vh;
+        font-size: 4vh;
+    }
+}
+@media only screen and (min-width: 700px) {
+    .tablero {
+        height: 45vh;
+        width: 45vh;
+    }
+    .btn-start {
+        height: 11vh;
+        width: 45vh;
+        font-size: 4vh;
+    }
+}
+@media only screen and (min-width: 1100px) {
+    .tablero {
+        height: 60vh;
+        width: 60vh;
+    }
+    .btn-start {
+        height: 15vh;
+        width: 50vh;
+        font-size: 6vh;
     }
 }
