@@ -116,7 +116,6 @@ iluminarColor(color) {
     ganoElJuego() {
         Nivel.innerHTML = `Ganaste! :O`
         this.eliminarEventosClick()
-        this.iluminarColores()
         btnReiniciar.innerHTML = `Reiniciar juego`
         btnReiniciar.classList.remove('hide')
         btnReiniciar.addEventListener('click', empezarJuego)
