@@ -6,7 +6,7 @@ const btnEmpezar = document.getElementById('btnEmpezar');
 btnEmpezar.addEventListener("click", empezarJuego);
 const Nivel = document.getElementById("Nivel");
 const btnReiniciar = document.getElementById("btnReiniciar");
-const ULTIMO_NIVEL = 1;
+const ULTIMO_NIVEL = 5;
 
 class Juego{
     constructor() {
