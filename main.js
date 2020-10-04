@@ -69,8 +69,8 @@ transformarColorANumero(color){
 iluminarSecuencia() {
     for (let n = 0; n < this.nivel; n++) {
         const color = this.transformarNumeroAColor(this.secuencia[n])
-        this.iluminarColor(color)
-    Nivel.innerHTML =`Nivel ${this.nivel}`
+        setTimeout(() => this.iluminarColor(color),1000 * n)
+    Nivel.innerHTML =` Nivel ${this.nivel}`
     }
 }
 
@@ -116,6 +116,7 @@ iluminarColor(color) {
     ganoElJuego() {
         Nivel.innerHTML = `Ganaste! :O`
         this.eliminarEventosClick()
+        this.iluminarColores()
         btnReiniciar.innerHTML = `Reiniciar juego`
         btnReiniciar.classList.remove('hide')
         btnReiniciar.addEventListener('click', empezarJuego)
