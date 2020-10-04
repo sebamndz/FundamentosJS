@@ -61,22 +61,22 @@ body {
 @mixin border {
     border-radius: 10%;
 }
-.celeste:hover {
+.celeste:active {
     background: rgb(255,255,255);
     background: linear-gradient(165deg, rgba(255,255,255,1) 4%, rgba(0,204,215,1) 99%);
     @include border
 }
-.violeta:hover {
+.violeta:active {
     background: rgb(255,255,255);
     background: linear-gradient(340deg, rgba(255,255,255,1) 4%, rgba(190,0,215,1) 99%);
     @include border
 }
-.naranja:hover{
+.naranja:active{
     background: rgb(255,255,255);
     background: linear-gradient(40deg, rgba(255,255,255,1) 5%, rgba(255,113,0,1) 100%);
     @include border
 }
-.verde:hover{
+.verde:active{
     background: rgb(255,255,255);
     background: linear-gradient(196deg, rgba(255,255,255,1) 4%, rgba(0,255,1,1) 99%);
     @include border
@@ -101,7 +101,7 @@ body {
     background: linear-gradient(196deg, rgba(255,255,255,1) 4%, rgba(0,255,1,1) 99%);
     @include border
 }
-footer {
+.botones {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -122,7 +122,6 @@ footer {
     outline: none;
     align-self: flex-start;
 }
-
 .btn-start:hover {
     color: #ecf0f1;
     background: #2c3e50;

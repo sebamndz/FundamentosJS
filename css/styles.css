@@ -21,13 +21,13 @@ body { height: 100vh; background-color: black; display: flex; align-items: cente
 
 .verde { background: url(https://i.imgur.com/2TwurG7.png) no-repeat; background-size: 100%; }
 
-.celeste:hover { background: white; background: linear-gradient(165deg, white 4%, #00ccd7 99%); border-radius: 10%; }
+.celeste:active { background: white; background: linear-gradient(165deg, white 4%, #00ccd7 99%); border-radius: 10%; }
 
-.violeta:hover { background: white; background: linear-gradient(340deg, white 4%, #be00d7 99%); border-radius: 10%; }
+.violeta:active { background: white; background: linear-gradient(340deg, white 4%, #be00d7 99%); border-radius: 10%; }
 
-.naranja:hover { background: white; background: linear-gradient(40deg, white 5%, #ff7100 100%); border-radius: 10%; }
+.naranja:active { background: white; background: linear-gradient(40deg, white 5%, #ff7100 100%); border-radius: 10%; }
 
-.verde:hover { background: white; background: linear-gradient(196deg, white 4%, #00ff01 99%); border-radius: 10%; }
+.verde:active { background: white; background: linear-gradient(196deg, white 4%, #00ff01 99%); border-radius: 10%; }
 
 .light.celeste { background: white; background: linear-gradient(165deg, white 4%, #00ccd7 99%); border-radius: 10%; }
 
@@ -37,7 +37,7 @@ body { height: 100vh; background-color: black; display: flex; align-items: cente
 
 .verde.light { background: white; background: linear-gradient(196deg, white 4%, #00ff01 99%); border-radius: 10%; }
 
-footer { display: flex; justify-content: center; width: 100%; height: 20vh; align-self: flex-end; margin-top: 10px; }
+.botones { display: flex; justify-content: center; width: 100%; height: 20vh; align-self: flex-end; margin-top: 10px; }
 
 .btn-start { cursor: pointer; background: #ecf0f1; color: #2c3e50; border: none; border-bottom: 4px solid #c4c6c7; border-radius: 80px; font-size: 3em; position: absolute; transition: .5s; outline: none; align-self: flex-start; }
 

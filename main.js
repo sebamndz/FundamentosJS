@@ -5,6 +5,7 @@ const verde = document.getElementById('verde');
 const btnEmpezar = document.getElementById('btnEmpezar');
 btnEmpezar.addEventListener("click", empezarJuego);
 const Nivel = document.getElementById("Nivel");
+const btnReiniciar = document.getElementById("btnReiniciar");
 const ULTIMO_NIVEL = 10;
 
 class Juego{
@@ -16,6 +17,7 @@ class Juego{
 
 inicializar() {
     btnEmpezar.classList.add('hide')
+    btnReiniciar.classList.add('hide')
     this.siguienteNivel = this.siguienteNivel.bind(this)
     this.elegirColor = this.elegirColor.bind(this)
     this.nivel = 1
@@ -33,6 +35,7 @@ generarSecuencia() {
 
 siguienteNivel() {
     this.subnivel = 0
+    this.eliminarEventosClick()
     this.iluminarSecuencia()
     this.agregarEventosClick()
 }
@@ -112,10 +115,14 @@ iluminarColor(color) {
     }
     ganoElJuego() {
         Nivel.innerHTML = `Ganaste! :O`
+        btnReiniciar.innerHTML
     }
     perdioElJuego() {
         Nivel.innerHTML= `Perdiste :(`
         this.eliminarEventosClick()
+        btnReiniciar.classList.remove('hide')
+        btnReiniciar.innerHTML = `Reiniciar juego`
+        btnReiniciar.addEventListener('click', empezarJuego)
     }
 }
 
