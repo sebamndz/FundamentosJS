@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
 * {
     padding: 0;
     margin: 0;
+    font-family: 'Nunito', sans-serif;
 }
 body {
     height: 100vh;
@@ -8,6 +10,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.Nivel {
+    display: inline-flex;
+    color: white;
+    justify-content: center;
+    position: fixed;
+    align-self: flex-start;
+    width: 50%;
+    font-size: 6vh;
+    margin-top: 5vh;
 }
 .tablero {
     background: url(https://i.imgur.com/ORbWEAh.png)no-repeat;
@@ -20,7 +32,7 @@ body {
     margin-bottom: 10vh;
 }
 .color {
-    width: 50%;
+    width: 49%;
     height:50%;
 }
 .left {
@@ -103,7 +115,7 @@ footer {
     color: #2c3e50;
     border: none;
     border-bottom: 4px solid #c4c6c7;
-    border-radius: 8px;
+    border-radius: 80px;
     font-size: 3em;
     position: absolute;
     transition: .5s;
